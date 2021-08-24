@@ -17,6 +17,8 @@ body {
 }
 
 a { text-decoration: none; }
+a:visited { color: purple; }
+a:hover { text-decoration: underline;  }
 
 .page-header {
   flex: none; /* fixed size */
@@ -60,7 +62,6 @@ i {
   display: flex;
   flex-wrap: wrap;
   list-style-type: none; 
-
   justify-content: flex-end;
   color: #ffce00;
 }
@@ -69,10 +70,7 @@ i {
   color: #ffce00;
   margin: 1em;
   padding: 1em;
-}
-.main-nav a:hover {
-  background-color: #ffce00;
-  color: white;
+  transition: all 1s ease-out;
 }
 
 .sub-menu li {
@@ -86,19 +84,36 @@ i {
 .sub-menu  li:hover > ul {
   display:inline-block;
 }
+.main-nav a:hover {
+  text-decoration: none;
+  background-color: #ffce00;
+  color: white;
+}
 
 #projects-section {
   justify-content: center;
 }
 
 img {
-  width: 65%;      
-  background-color: #c0ccd4;
-  max-width: 500px;
+  width: 40%;      
+  background-color: #fff;
   display: block;
   opacity: 0.9;
-  border: 3px solid #c0ccd4;
+  border: 3px solid #fff;
+  transition: all 1s ease-in-out;
+}
+ /* all 3 bellow are using transition above */
+.enlarge:hover {
+  border: 10px solid #fff;
+  width: 50%;
+}
+.shrink:hover {
+  border: 10px solid #fff;
+  width: 30%;
 }
 
+.rotate:hover {
+  transform: rotate(180deg);
+}
 
    
